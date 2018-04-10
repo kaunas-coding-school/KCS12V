@@ -1,0 +1,43 @@
+.lenta {
+    width: 818px;
+    height: 512px;
+}
+.lenta .eilute, .lenta .stulpelis {
+    border: 1px solid black;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.stulpelis {
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+
+.juoda {
+    background-color: black !important;
+}
+
+.prop {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.kede {
+    background: url("/img/office-chair.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.robotas {
+    background: url("/img/android-2-64.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 2px;
+}
+.target {
+    background: url("/img/fi-target.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}

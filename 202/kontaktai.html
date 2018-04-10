@@ -1,10 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Kontaktai</title>
+    <title>Pirmasis puslapis</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/meniu.css">
 </head>
 <body>
-mano slaptazodis
+<div class="container">
+    <div class="content">
+        <nav>
+            <div class="pervidury">
+                <div>
+                    <ul>
+                        <li>
+                            <a href="/index.html">Pradzia</a>
+                        </li>
+                        <li>
+                            <a href="/201/zaidimas.html">Zaidimas</a>
+                        </li>
+                        <li>
+                            <a href="/202/kontaktai.html">Kontaktai</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="info">
+            <form>
+                <input name="vardas" type="text" value="Vardas"/>
+
+                <select name="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="audi">Audi</option>
+                </select>
+
+                <textarea name="message" rows="5" cols="10">The cat was playing in the garden.</textarea>
+
+                <button name="vardas" type="submit">Click Me!</button>
+                <input name="vardas" type="submit" value="No Click Me!"/>
+                <a type="submit" href="#">No NO Click Me!!!</a>
+
+            </form>
+        </div>
+        <footer>
+            <div></div>
+            Visos teises saugomos &copy; 2018
+        </footer>
+    </div>
+</div>
 </body>
 </html>
