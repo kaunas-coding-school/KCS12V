@@ -32,22 +32,18 @@ robotas.zemyn = function(steps) {
 document.onkeyup = function(e) {
     if(e.keyCode == 37) {
         robotas.kairen();
-        console.log('judu kairen');
     }
 
     if(e.keyCode == 38) {
         robotas.aukstyn();
-        console.log('judu aukstyn');
     }
 
     if(e.keyCode == 39) {
         robotas.desinen();
-        console.log('judu desinen');
     }
 
     if(e.keyCode == 40) {
         robotas.zemyn();
-        console.log('judu zemyn');
     }
 };
 
