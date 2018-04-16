@@ -1,46 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="manoApsas">
 <head>
     <title>Pirmasis puslapis</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/meniu.css">
 </head>
-<body>
+<body ng-cloak>
 <div class="container">
     <div class="content">
-        <nav>
+
+
+
+
+
+        <nav ng-controller="menuController as mc">
             <div class="pervidury">
                 <div>
                     <ul>
-                        <li>
-                            <a href="/index.html">Pradzia</a>
-                        </li>
-                        <li>
-                            <a href="/201/zaidimas.html">Zaidimas</a>
-                        </li>
-                        <li>
-                            <a href="/202/kontaktai.html">Kontaktai</a>
+                        <li ng-repeat="item in mc.meniu" >
+
+
+
+                            <a href="{{item.adresas}}"  ng-if="!item.submeniu" >{{item.pavadinimas}}</a>
+
+                            <ul ng-if="item.submeniu">
+                                <li ng-repeat="it2 in item.submeniu" >
+                                    {{it2.pavadinimas}}
+                                </li>
+                            </ul>
+
+
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="info">
-            <form>
-                <input name="vardas" type="text" value="Vardas"/>
 
-                <select name="cars">
+
+
+
+
+
+
+        <div class="info">
+
+            <h1>{{ vardas }}, pasirinko {{auto}}</h1>
+            <br/>
+            <br/>
+
+            <form>
+                <input name="pirmas" type="text" ng-model="meniu[0].pavadinimas" /><br/>
+
+                <input name="vardas" type="text" ng-model="vardas" ng-init="vardas='Testas'"/><br/>
+
+
+                <select name="cars" ng-model="auto">
                     <option value="volvo">Volvo</option>
                     <option value="saab">Saab</option>
                     <option value="fiat">Fiat</option>
                     <option value="audi">Audi</option>
-                </select>
+                </select><br/>
 
-                <textarea name="message" rows="5" cols="10">The cat was playing in the garden.</textarea>
+                <textarea name="message" rows="5" cols="10"></textarea><br/>
 
-                <button name="vardas" type="submit">Click Me!</button>
-                <input name="vardas" type="submit" value="No Click Me!"/>
+                <button name="vardas" type="submit">Click Me!</button><br/>
+                <input name="vardas" type="submit" value="No Click Me!"/><br/>
                 <a type="submit" href="#">No NO Click Me!!!</a>
 
             </form>
@@ -51,5 +76,8 @@
         </footer>
     </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="/js/angular_failai/manoApsas.js"></script>
+
 </body>
 </html>

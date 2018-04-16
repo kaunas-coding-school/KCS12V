@@ -2,6 +2,7 @@
     width: 818px;
     height: 512px;
 }
+
 .lenta .eilute, .lenta .stulpelis {
     border: 1px solid black;
     background-color: white;
@@ -30,14 +31,20 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+
 .robotas {
     background: url("/img/c3po.jpeg");
     background-size: contain;
     background-repeat: no-repeat;
     top: 2px;
 }
+
 .target {
     background: url("/img/fi-target.svg");
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.boom {
+    background: url('/img/boom.gif');
 }

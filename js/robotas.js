@@ -7,25 +7,25 @@ robotas.position['left'] = 0;
 
 robotas.kairen = function () {
     robotas.position['left'] = robotas.position['left'] - 102;
-    robotas.css('left', robotas.position['left'] + 'px');
+    robotas.animate({left: robotas.position['left'] + 'px'}, 300);
     arMirtis();
 };
 
 robotas.aukstyn = function () {
     robotas.position['top'] = robotas.position['top'] - 102;
-    robotas.css('top', robotas.position['top'] + 'px');
+    robotas.animate({top: robotas.position['top'] + 'px'}, 300);
     arMirtis();
 };
 
 robotas.desinen = function () {
     robotas.position['left'] = robotas.position['left'] + 102;
-    robotas.css('left', robotas.position['left'] + 'px');
+    robotas.animate({left:  robotas.position['left'] + 'px'}, 300);
     arMirtis();
 };
 
 robotas.zemyn = function () {
     robotas.position['top'] = robotas.position['top'] + 102;
-    robotas.css('top', robotas.position['top'] + 'px');
+    robotas.animate({top:  robotas.position['top'] + 'px'}, 300);
     arMirtis();
 };
 
@@ -73,14 +73,14 @@ var isCollide = function () {
             state = true;
         }
     });
+    console.log(state);
     return state;
 };
 
 function arMirtis() {
     if (isCollide()) {
-        robotas.css('background', "url('/img/boom.gif')");
+        robotas.addClass('boom');
         setTimeout(function(){atgalIPradzia();}, 500);
-
     }
 }
 
@@ -89,9 +89,9 @@ function atgalIPradzia() {
     robotas.position['left'] = 0;
     robotas.css(
         {
-            top:0,
-            left:0,
-            background:"url('/img/c3po.jpeg')"
+            top:robotas.position['top'],
+            left:robotas.position['left'],
         }
     );
+    robotas.removeClass('boom')
 }

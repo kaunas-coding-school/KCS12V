@@ -1,0 +1,24 @@
+[
+  {
+    "adresas": "/index.html",
+    "pavadinimas": "Pradzia"
+  },
+  {
+    "adresas": "/201/zaidimas.html",
+    "pavadinimas": "Zaidimas"
+  },
+  {
+    "adresas": "/202/kontaktai.html",
+    "pavadinimas": "Kontaktai"
+  },
+  {
+    "adresas": "/202/kontaktai.html",
+    "pavadinimas": "Kontaktai",
+    "submeniu": [
+      {
+        "adresas": "/index.html",
+        "pavadinimas": "Pradzia"
+      }
+    ]
+  }
+]
