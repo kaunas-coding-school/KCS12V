@@ -1,24 +1,14 @@
 [
   {
-    "adresas": "/index.html",
+    "adresas": "/",
     "pavadinimas": "Pradzia"
   },
   {
-    "adresas": "/201/zaidimas.html",
+    "adresas": "/zaidimas",
     "pavadinimas": "Zaidimas"
   },
   {
-    "adresas": "/202/kontaktai.html",
+    "adresas": "/kontaktai",
     "pavadinimas": "Kontaktai"
-  },
-  {
-    "adresas": "/202/kontaktai.html",
-    "pavadinimas": "Kontaktai",
-    "submeniu": [
-      {
-        "adresas": "/index.html",
-        "pavadinimas": "Pradzia"
-      }
-    ]
   }
 ]
